@@ -1,0 +1,2 @@
+service tomcat7 restart    ok
+service tomcat7 restart    ok
