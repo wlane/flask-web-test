@@ -44,6 +44,21 @@ def input_passwd(passwdname):  #设置相关密码
         mongopasswd = raw_input('please input mongodb user(anyuan)\'s password: ')
         return mongopasswd
 
+def backup(source, dest):
+    if not os.path.exists(dest):
+        print dest+" does not exist,create it"
+        os.mkdir(dest)
+    if not os.path.exists(source):
+        print source+" does not exist."
+        sys.exit() 
+    filedate = time.strftime('%Y%m%d')+"_"+time.strftime('%H%M%S')
+    filename = os.path.split(source)[1]+"_"+filedate+".tar.gz"
+    backup_command = "tar zcf %s %s" % (dest+'/'+filename,source)
+    if os.system(backup_command) == 0:
+        print "backup "+source+" successful!"
+    else:
+        print "backup "+source+" failed.........."
+
 def replace(filepath, oldstr, newstr):  #替换文件中的字符 
   try:
     print newstr+' replace '+oldstr+' in '+filepath

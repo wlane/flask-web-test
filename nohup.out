@@ -1,0 +1,40 @@
+nohup: ignoring input
+ * Serving Flask app "upload" (lazy loading)
+ * Environment: production
+   WARNING: Do not use the development server in a production environment.
+   Use a production WSGI server instead.
+ * Debug mode: on
+ * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 106-030-853
+ * Stopping Tomcat servlet engine tomcat7
+   ...done.
+ * Starting Tomcat servlet engine tomcat7
+   ...done.
+tar: Removing leading `/' from member names
+tar: /var/lib/tomcat7/webapps/mianyang: Cannot stat: No such file or directory
+tar: Exiting with failure status due to previous errors
+tar: Removing leading `/' from member names
+tar: /var/lib/tomcat7/webapps/mianyang.war: Cannot stat: No such file or directory
+tar: Exiting with failure status due to previous errors
+218.89.189.14 - - [13/Jul/2018 23:14:15] "POST /upload HTTP/1.1" 302 -
+218.89.189.14 - - [13/Jul/2018 23:14:15] "GET /upload HTTP/1.1" 200 -
+ * Detected change in '/root/python/flask-web-test/base_func.py', reloading
+[31;10m****************[0m
+service tomcat7 stop
+[31;10mservice tomcat7 stop   ok[0m
+[31;10m****************[0m
+rm -rf /var/lib/tomcat7/webapps/mianyang.war
+[31;10mrm -rf /var/lib/tomcat7/webapps/mianyang.war   ok[0m
+[31;10m****************[0m
+rm -rf /var/lib/tomcat7/webapps/mianyang
+[31;10mrm -rf /var/lib/tomcat7/webapps/mianyang   ok[0m
+[31;10m****************[0m
+service tomcat7 restart
+[31;10mservice tomcat7 restart   ok[0m
+backup failed..........
+backup failed..........
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 106-030-853
